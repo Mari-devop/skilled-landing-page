@@ -23,14 +23,10 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 
 ### Link
 
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL here](https://mari-devop.github.io/skilled-landing-page/)
 
 ## My process
 
