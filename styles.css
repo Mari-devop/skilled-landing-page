@@ -1,0 +1,372 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* layout */
+    --primary-bgr: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(194,185,209,1) 100%);
+
+
+    /* buttons */
+    --primary-button: rgb(19, 24, 63);
+    --primary-button-hover: rgb(102, 108, 163);
+    --main-button: linear-gradient(0deg, rgba(240,42,166,1) 0%, rgba(255,111,72,1) 100%);
+    --footer-button: linear-gradient(180deg, rgba(72,81,255,1) 0%, rgba(240,42,166,1) 100%);
+
+    /* typography */
+    --primary-color: rgb(131, 134, 154);
+    --headers-color: rgb(19, 24, 63);
+    --secondary-color: rgb(247, 71, 128);
+    --secondary-color-hover: rgb(255, 167, 195);
+    --text-button: rgb(255, 255, 255);
+    --ff-primary: 'Plus Jakarta Sans', sans-serif;
+   
+}
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    width: 1440px;
+   background: var(--primary-bgr) fixed;
+}
+
+h1, 
+h2,
+h3 {
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    color: var(--headers-color);
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 70px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 51px;
+}
+h3 {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.button {
+    height: 56px;
+    width: 167px;
+    font-size: 18px;
+    font-family: var(--ff-primary);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.button:hover {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+     width: auto;
+    }
+ }
+ @media only screen and (max-width: 375px) {
+     body {
+      width: auto;
+     }
+  }
+
+
+/*
+=============== 
+Header Styles
+===============
+*/
+
+header {
+    background-color: var(--primary-dark);
+    width: 1440px;
+    height: 120px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-left: 165px;
+    margin-right: 165px;
+    margin-top: 57px;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+ 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: var(--primary-button);
+    color: var(--text-button);
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+    header ul {
+        margin: 32px;
+        justify-content: space-around;
+    }
+    .button {
+        height: 48px;
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header {
+        width: 100%;
+    }
+    header ul {
+        margin: 32px;
+        justify-content: space-between;
+    }
+}
+
+/*
+=============== 
+Main section Styles
+===============
+*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 165px;
+    margin-top: 100px;
+}
+
+.main-image {
+   margin-top: -200px;
+   overflow: hidden;
+}
+
+.main-btn {
+    background: var(--main-button);
+    color: var(--text-button);
+    margin-top: 40px;
+}
+.main-image-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+    }
+    .main-text {
+        display: block;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        height: 284px;
+        max-width: 398px;
+        margin-left: 39px;  
+    }
+    .main-text h1 {
+        font-size: 48px;
+    }
+    .main-image img{
+        width: 640px;
+        height: 640px;
+    }
+    .main-btn {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+    .main-text h1 {
+        font-size: 36px;
+        line-height: normal;
+    }
+    .main-image {
+        display: none;
+    }
+    .main-image-mobile{
+        display: block;
+        height: 301px;
+        width: 327px;
+        padding-top: 30px;
+    }
+    .main-image-mobile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*
+=============== 
+Feature section Styles
+===============
+*/
+
+.feature {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 1110px;
+    height: 748px; 
+}
+
+.feature-block {
+    max-height: 320px;
+    max-width: 350px;
+    border: 1px solid #ffff;
+    border-radius: 10%;
+    background: #ffff;
+    opacity: 0.9;
+    padding: 20px;
+    position: relative;
+}
+
+span {
+    position: absolute;
+    top: -10%;
+}
+
+ a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--secondary-color-hover);
+}
+
+.colored {
+    background: var(--main-button);
+}
+
+.colored h2 {
+    color: #ffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .feature {
+        grid-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 689px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .feature {
+        grid-gap: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 345px; 
+    }
+}
+
+
+/*
+=============== 
+Footer section Styles
+===============
+*/
+
+footer {
+    background-color: var(--primary-button);
+    width: 1440px;
+    height: 120px;
+    margin-top: 140px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-left: 165px;
+    margin-right: 165px;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+ 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.foooter {
+    background: var(--footer-button);
+    color: var(--text-button);
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        margin-top: 220px;
+    }
+    footer ul {
+        margin: 32px;
+        justify-content: space-around;
+    }
+    .button {
+        height: 48px;
+        width: 140px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    footer {
+        width: 100%;
+        margin-top: 1120px;
+    }
+    footer ul {
+        margin: 32px;
+        justify-content: space-between;
+    }
+}
