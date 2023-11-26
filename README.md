@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL here](https://mari-devop.github.io/skilled-landing-page/)
 
 ## My process
 
